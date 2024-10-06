@@ -5,6 +5,7 @@ from rock_paper_scissors.api.models import Base, Game, Move
 from rock_paper_scissors.api.crud import create_game, get_global_info, get_strong_hand, get_weak_hand, get_hand_info, get_ranking, get_statistics
 from rock_paper_scissors.api import schemas
 from collections import Counter
+import time
 
 
 @pytest.fixture(scope='function')
