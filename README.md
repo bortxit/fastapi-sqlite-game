@@ -92,7 +92,7 @@ docker-compose run --rm pytest
 docker-compose run --rm doctest
 ```
 
-### 4. Other commands in Docker
+4. Other commands in Docker
 - Stop Services in Docker
 ```bash
 docker-compose down
