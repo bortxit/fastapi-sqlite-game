@@ -1,7 +1,7 @@
 from fastapi.testclient import TestClient
 from unittest.mock import patch
 
-from main import app
+from rock_paper_scissors.api.init_app import app
 
 client = TestClient(app)
 

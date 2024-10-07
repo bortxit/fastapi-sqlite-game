@@ -1,0 +1,51 @@
+services:
+  uvicorn:
+    build: .
+    container_name: uvicorn_service
+    command: uvicorn rock_paper_scissors.api.init_app:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    tty: true
+    stdin_open: true
+
+  game:
+    build: .
+    container_name: game_service
+    command: python main.py
+    environment:
+      - API_URL=http://uvicorn:8000
+      - PYTHONUNBUFFERED=1
+    stdin_open: true
+    tty: true
+
+  special_game:
+    build: .
+    container_name: game_special_service
+    command: python main.py mvm 2 #add the number games you want
+    environment:
+      - API_URL=http://uvicorn:8000
+      - PYTHONUNBUFFERED=1
+    stdin_open: true
+    tty: true
+
+  pytest:
+    build: .
+    container_name: pytest_container
+    command: pytest
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    stdin_open: true
+    tty: true
+
+  doctest:
+    build: .
+    container_name: doctest_service
+    command: python -m doctest -v rock_paper_scissors/user_menu.py  # Add the file you want to test
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    tty: true
+    stdin_open: true

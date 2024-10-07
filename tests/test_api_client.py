@@ -2,7 +2,7 @@ import pytest
 from unittest.mock import patch
 from rock_paper_scissors.api.api_client import create_game, get_global_info, get_strong_hand, get_weak_hand, get_ranking, get_statistics
 
-@pytest.fixture
+@pytest.fixture(scope='function')
 def mock_requests_post():
     """
     Fixture to mock the 'requests.post' function for use in tests that involve POST requests.
@@ -10,7 +10,7 @@ def mock_requests_post():
     with patch('requests.post') as mock_post:
         yield mock_post
 
-@pytest.fixture
+@pytest.fixture(scope='function')
 def mock_requests_get():
     """
     Fixture to mock the 'requests.get' function for use in tests that involve GET requests.

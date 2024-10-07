@@ -1,7 +1,9 @@
 from .database import SessionLocal
 import logging
+import os
 import requests
 
+api_url = os.getenv("API_URL")
 
 # Dependency
 def get_db():
@@ -29,7 +31,7 @@ def create_game(rounds_information: dict, game_information:dict):
     Raises:
         requests.exceptions.RequestException: If there's an error during the request.
     """
-    API_URL = "http://localhost:8000/game/"
+    API_URL = f"{api_url}/game/"
     data_to_send = {
         "rounds_played": rounds_information["rounds_played"],
         "game_winner": game_information["game_winner"]
@@ -49,7 +51,7 @@ def get_global_info():
     Raises:
         requests.exceptions.RequestException: If there's an error during the request.
     """
-    API_URL = "http://localhost:8000/game/get_global_info"
+    API_URL = f"{api_url}/game/get_global_info"
     try:
         response = requests.get(API_URL)
         print(response.text)
@@ -63,7 +65,7 @@ def get_strong_hand():
     Raises:
         requests.exceptions.RequestException: If there's an error during the request.
     """
-    API_URL = "http://localhost:8000/game/mano_fuerte"
+    API_URL = f"{api_url}/game/mano_fuerte"
     try:
         response = requests.get(API_URL)
         print(response.text)
@@ -77,7 +79,7 @@ def get_weak_hand():
     Raises:
         requests.exceptions.RequestException: If there's an error during the request.
     """
-    API_URL = "http://localhost:8000/game/mano_debil"
+    API_URL = f"{api_url}/game/mano_debil"
     try:
         response = requests.get(API_URL)
         print(response.text)
@@ -91,7 +93,7 @@ def get_ranking():
     Raises:
         requests.exceptions.RequestException: If there's an error during the request.
     """
-    API_URL = "http://localhost:8000/game/ranking"
+    API_URL = f"{api_url}/game/ranking"
     try:
         response = requests.get(API_URL)
         print(response.text)
@@ -105,7 +107,7 @@ def get_statistics():
     Raises:
         requests.exceptions.RequestException: If there's an error during the request.
     """
-    API_URL = "http://localhost:8000/game/estadisticas"
+    API_URL = f"{api_url}/game/estadisticas"
     try:
         response = requests.get(API_URL)
         print(response.text)

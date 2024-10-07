@@ -1,21 +1,9 @@
-from fastapi import FastAPI
 import logging
 import sys
 
-from rock_paper_scissors.api.database import engine
-from rock_paper_scissors.api.routers import game
-from rock_paper_scissors.api import models
 from rock_paper_scissors.game_logic import play_game
 from rock_paper_scissors.user_menu import print_menu, handle_choice
 from rock_paper_scissors.utils import setup_logging
-
-
-models.Base.metadata.create_all(bind=engine)
-
-app = FastAPI()
-
-#Routers
-app.include_router(game.router)
 
 
 def main():
