@@ -24,8 +24,10 @@ The API includes features to calculate the strongest and weakest hands for human
 2. Create and activate a virtual environment
   ```bash
   python -m venv venv
-  .\venv\Scripts\activate
   ```
+  ```bash
+  .\venv\Scripts\activate
+  ```  
 
 3. Install dependencies:
   ```bash
