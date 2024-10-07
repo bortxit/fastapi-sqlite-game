@@ -74,7 +74,7 @@ def get_global_info(db: Session) -> schemas.GlobalInfo:
     """
     total_games = db.query(models.Game).count()
     total_wins = db.query(models.Game).filter(models.Game.winner == 'Human').count()
-    total_losses = total_games - total_wins
+    total_losses = db.query(models.Game).filter(models.Game.winner == 'Machine').count()
 
     winrate_percentage = (total_wins / total_games * 100) if total_games > 0 else 0
 
