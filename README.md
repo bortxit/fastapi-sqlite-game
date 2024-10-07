@@ -103,6 +103,17 @@ docker-compose down
 docker-compose down
 ```
 
+## Usage
+### Available Endpoints
+| Method |      Endpoint          | Description                                                                                    |
+|--------|------------------------|------------------------------------------------------------------------------------------------|
+|  POST  | /games                 | Create a new game                                                                              |
+|  GET   | /games/get_global_info | Get global information about total victories, total losses, number of games played, % winrate  |
+|  GET   | /games/mano_fuerte     | Fila 3 Col 3  |
+|  GET   | /games/mano_debil      | Fila 3 Col 3  |
+|  GET   | /games/ranking         | Fila 3 Col 3  |
+|  GET   | /games/estadisticas    | Fila 3 Col 3  |
+
 
 
 
