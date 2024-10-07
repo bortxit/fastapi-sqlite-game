@@ -33,5 +33,25 @@ The API includes features to calculate the strongest and weakest hands for human
   ```
 
 ## Running the application
+### Option 1: Run Locally
+1. Start the API in a command line.
+```bash
+uvicorn rock_paper_scissors.api.init_app:app --reload
+```
+This will start the server at http://127.0.0.1:8000/.
+
+2.Start application console in another command line
+```bash
+python main.py # basic game
+```
+```bash
+python main.py mvm 1 # special game machine vs machine: first_parameter = game mode, second_parameter = number of games to play
+```
+
+3. Access API documentation with Swagger
+```bash
+http://127.0.0.1:8000/docs
+```
+
 
 
