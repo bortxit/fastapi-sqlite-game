@@ -60,8 +60,9 @@ Prerequisites
 - Install Docker Desktop.
 - Configure docker-compose with docker-compose.yml and Dockerfile.
 
-### 1. Start the services using Docker Compose. Docker Compose will use Dockerfile to create a image of web service, installing Python dependencies and preparing the environment to execute the application.
+### 1. Start the services using Docker Compose.
 ```bash
+#Docker Compose will use Dockerfile to create a image of web service, installing Python dependencies and preparing the environment to execute the application.
 docker-compose build
 ```
 
