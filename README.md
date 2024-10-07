@@ -169,5 +169,26 @@ docker-compose ps
   }
   ```
 
+  ## Testing
+  The project includes automated unit tests with pytest and doctest to ensure the correct functioning of CRUD operations and game statistics.
+
+  ### Running the Tests using Pytest
+  1. To run all tests:
+  ```bash
+  pytest # Locally
+  ```
+  ```bash
+  docker-compose run --rm pytest # With docker
+  ```
+  2. To run specific tests, like the ones in test_crud.py:
+  ```bash
+  pytest tests/test_crud.py
+  ```
+  ```bash
+  docker-compose run --rm pytest # With docker we should change docker-compose.yml to execute the tests that we want
+  ```
+
+  ### Running the Tests using Doctest
+
 
 
