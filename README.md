@@ -70,7 +70,7 @@ docker-compose build
 docker-compose up -d uvicorn
 ```
 
-3. Run different services
+3. Run different services.\n
 Simple game Human vs Machine
 ```bash
 docker-compose run --rm game
