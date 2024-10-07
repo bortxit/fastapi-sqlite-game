@@ -14,6 +14,7 @@ The API includes features to calculate the strongest and weakest hands for human
 - Docker support for easy deployment.
 
 ## Table of Contents
+- [Installation](#Installation)
 
 ## Installation
 1. Clone the repository
