@@ -15,7 +15,7 @@ The API includes features to calculate the strongest and weakest hands for human
 
 ## Table of Contents
 - [Installation](#Installation)
-- [Running Application](#Execution)
+- [Execution](#Execution)
 - [Usage](#Usage)
 - [Testing](#Testing)
 
