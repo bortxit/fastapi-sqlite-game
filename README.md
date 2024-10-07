@@ -15,12 +15,9 @@ The API includes features to calculate the strongest and weakest hands for human
 
 ## Table of Contents
 - [Installation](#Installation)
-- [Running the application](#Running the application)
-  - [Option 1: Run App Locally](#Option 1: Run App Locally)
-  - [Option 2: Run App with Docker](#Option 2: Run App with Docker)
+- [Running Application](#Execution)
 - [Usage](#Usage)
-  - [Available Endpoints](#Available Endpoints)
-  - [Response Format](#Response Format)
+- [Testing](#Testing)
 
 ## Installation
 1. Clone the repository
@@ -39,7 +36,7 @@ The API includes features to calculate the strongest and weakest hands for human
   pip install -r requirements.txt
   ```
 
-## Running the application
+## Execution
 ### Option 1: Run App Locally
 1. Start the API in a command line.
 ```bash
