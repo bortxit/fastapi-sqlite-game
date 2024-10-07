@@ -42,7 +42,6 @@ The API includes features to calculate the strongest and weakest hands for human
 ```bash
 uvicorn rock_paper_scissors.api.init_app:app --reload
 ```
-This will start the server at http://127.0.0.1:8000/.
 
 2. Start application console in another command line
 ```bash
