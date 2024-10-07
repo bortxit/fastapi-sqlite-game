@@ -15,6 +15,12 @@ The API includes features to calculate the strongest and weakest hands for human
 
 ## Table of Contents
 - [Installation](#Installation)
+- [Running the application](#Running the application)
+  - [Option 1: Run App Locally](#Option 1: Run App Locally)
+  - [Option 2: Run App with Docker](#Option 2: Run App with Docker)
+- [Usage](#Usage)
+  - [Available Endpoints](#Available Endpoints)
+  - [Response Format](#Response Format)
 
 ## Installation
 1. Clone the repository
