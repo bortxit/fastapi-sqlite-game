@@ -105,14 +105,14 @@ docker-compose down
 
 ## Usage
 ### Available Endpoints
-| Method |      Endpoint          | Description                                                                                    |
-|--------|------------------------|------------------------------------------------------------------------------------------------|
-|  POST  | /games                 | Create a new game                                                                              |
-|  GET   | /games/get_global_info | Get global information about total victories, total losses, number of games played, % winrate  |
-|  GET   | /games/mano_fuerte     | Fila 3 Col 3  |
-|  GET   | /games/mano_debil      | Fila 3 Col 3  |
-|  GET   | /games/ranking         | Fila 3 Col 3  |
-|  GET   | /games/estadisticas    | Fila 3 Col 3  |
+| Method |      Endpoint          | Description                                                                                                                          |
+|--------|------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+|  POST  | /games                 | Create a new game                                                                                                                    |
+|  GET   | /games/get_global_info | Get global information about total victories, total losses, number of games played, % winrate                                        |
+|  GET   | /games/mano_fuerte     | Choose the hand that has achieved the most victories in the games, along with the corresponding win percentage for playing this hand.|
+|  GET   | /games/mano_debil      | Choose the hand that has achieved the most losses in the games, along with the corresponding loss percentage for playing this hand.  |
+|  GET   | /games/ranking         | Get the three best players with most points.                                                                                         |
+|  GET   | /games/estadisticas    | Gather information on the total number of games played, the number of games won, and the number of games lost due to abandonment.    |
 
 
 
