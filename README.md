@@ -154,10 +154,11 @@ docker-compose ps
   ```
 - GET /game/ranking: Best 3 players with points 
   ```bash
-  {
-    "weak_hand": "rock",
-    "loss_percentage": 50.0
-  }
+  [
+    {"name":"Machine_2","points":5},
+    {"name":"Machine_1","points":3},
+    {"name":"Human","points":2}
+  ]
   ```
 - GET /game/estadisticas: Get general statistics
   ```bash
