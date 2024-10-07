@@ -107,27 +107,36 @@ docker-compose ps
 ### Available Endpoints
 | Method |      Endpoint          | Description                                                                                                                          |
 |--------|------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-|  POST  | /game                 | Create a new game                                                                                                                    |
-|  GET   | /game/get_global_info | Get global information about total victories, total losses, number of games played, % winrate                                        |
-|  GET   | /game/mano_fuerte     | Choose the hand that has achieved the most victories in the games, along with the corresponding win percentage for playing this hand.|
-|  GET   | /game/mano_debil      | Choose the hand that has achieved the most losses in the games, along with the corresponding loss percentage for playing this hand.  |
-|  GET   | /game/ranking         | Get the three best players with most points.                                                                                         |
+|  POST  | /game                  | Create a new game                                                                                                                    |
+|  GET   | /game/get_global_info  | Get global information about total victories, total losses, number of games played, % winrate                                        |
+|  GET   | /game/mano_fuerte      | Choose the hand that has achieved the most victories in the games, along with the corresponding win percentage for playing this hand.|
+|  GET   | /game/mano_debil       | Choose the hand that has achieved the most losses in the games, along with the corresponding loss percentage for playing this hand.  |
+|  GET   | /game/ranking          | Get the three best players with most points.                                                                                         |
 |  GET   | /games/estadisticas    | Gather information on the total number of games played, the number of games won, and the number of games lost due to abandonment.    |
 
 ### Response Format
 - POST /game: Create game
   ```bash
   {
-  "id": 1,
-  "rounds_played": [
-    {
-      "player_1_move": "rock",
-      "player_2_move": "scissors",
-      "winner": "Human"
-    }
-  ],
-  "game_winner": "Human"
- }
+    "id": 1,
+    "rounds_played": [
+      {
+        "player_1_move": "rock",
+        "player_2_move": "scissors",
+        "winner": "Human"
+      }
+    ],
+    "game_winner": "Human"
+  }
+  ```
+- GET /game/get_global_info: Get global statistics
+  ```bash
+  {
+    "total_games": 100,
+    "total_wins": 55,
+    "total_losses": 45,
+    "winrate_percentage": 55.0
+  }
   ```
 
 
