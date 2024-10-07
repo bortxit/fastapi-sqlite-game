@@ -48,6 +48,7 @@ uvicorn rock_paper_scissors.api.init_app:app --reload
 
 2. Start application console in another command line
 ```bash
+.\venv\Scripts\activate
 python main.py # basic game
 ```
 ```bash
