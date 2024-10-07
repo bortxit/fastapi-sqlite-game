@@ -34,13 +34,13 @@ The API includes features to calculate the strongest and weakest hands for human
 
 ## Running the application
 ### Option 1: Run App Locally
-1. Start the API in a command line.
+### 1. Start the API in a command line.
 ```bash
 uvicorn rock_paper_scissors.api.init_app:app --reload
 ```
 This will start the server at http://127.0.0.1:8000/.
 
-2. Start application console in another command line
+### 2. Start application console in another command line
 ```bash
 python main.py # basic game
 ```
@@ -48,7 +48,7 @@ python main.py # basic game
 python main.py mvm 1 # special game machine vs machine: first_parameter = game mode, second_parameter = number of games to play
 ```
 
-3. Access API documentation with Swagger
+### 3. Access API documentation with Swagger
 ```bash
 http://127.0.0.1:8000/docs
 ```
@@ -60,44 +60,44 @@ Prerequisites
 - Install Docker Desktop.
 - Configure docker-compose with docker-compose.yml and Dockerfile.
 
-1. Start the services using Docker Compose. Docker Compose will use Dockerfile to create a image of web service, installing Python dependencies and preparing the environment to execute the application.
+### 1. Start the services using Docker Compose. Docker Compose will use Dockerfile to create a image of web service, installing Python dependencies and preparing the environment to execute the application.
 ```bash
 docker-compose build
 ```
 
-2. Start the API.
+### 2. Start the API.
 ```bash
 docker-compose up -d uvicorn
 ```
 
-3. Run different services.\n
-Simple game Human vs Machine
+### 3. Run different services.
+### Simple game Human vs Machine
 ```bash
 docker-compose run --rm game
 ```
 
-Special game mode machine vs machine
+### Special game mode machine vs machine
 ```bash
 docker-compose run --rm special_game
 ```
 
-Tests for the application
+### Tests for the application
 ```bash
 docker-compose run --rm pytest
 ```
 
-Doctest
+### Doctest
 ```bash
 docker-compose run --rm doctest
 ```
 
-4. Other commands in Docker
-Stop Services in Docker
+### 4. Other commands in Docker
+### Stop Services in Docker
 ```bash
 docker-compose down
 ```
 
-Show container being executed
+### Show container being executed
 ```bash
 docker-compose down
 ```
