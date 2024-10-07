@@ -138,18 +138,33 @@ docker-compose ps
     "winrate_percentage": 55.0
   }
   ```
-- GET /game/mano_fuerte: Get strong hand
+- GET /game/mano_fuerte: Strongest hand for human
   ```bash
   {
     "strong_hand": "rock",
     "win_percentage": 60.0
   }
   ```
-- GET /game/mano_debil: Get weak hand
+- GET /game/mano_debil: Weakest hand for human
   ```bash
   {
     "weak_hand": "rock",
     "loss_percentage": 50.0
+  }
+  ```
+- GET /game/ranking: Best 3 players with points 
+  ```bash
+  {
+    "weak_hand": "rock",
+    "loss_percentage": 50.0
+  }
+  ```
+- GET /game/estadisticas: Get general statistics
+  ```bash
+  {
+    "total_games": 8,
+    "total_wins": 3,
+    "total_abandonments": 2
   }
   ```
 
