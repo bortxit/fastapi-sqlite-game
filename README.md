@@ -28,26 +28,26 @@ The API includes features to calculate the strongest and weakest hands for human
   git clone https://github.com/bortxit/fastapi-sqlite-game.git
   ```
 
-2. Create and activate a virtual environment
+## Execution
+### Option 1: Run App Locally
+1. Create and activate a virtual environment
   ```bash
   cd fastapi-sqlite-game
   python -m venv venv
   .\venv\Scripts\activate
   ```
 
-3. Install dependencies:
+2. Install dependencies:
   ```bash
   pip install -r requirements.txt
   ```
 
-## Execution
-### Option 1: Run App Locally
-1. Start the API in a command line.
+3. Start the API in a command line.
 ```bash
 uvicorn rock_paper_scissors.api.init_app:app --reload
 ```
 
-2. Start application console in another command line
+4. Start application console in another command line
 ```bash
 cd fastapi-sqlite-game
 .\venv\Scripts\activate
@@ -57,7 +57,7 @@ python main.py # basic game
 python main.py mvm 1 # special game machine vs machine: first_parameter = game mode, second_parameter = number of games to play
 ```
 
-3. Access API documentation with Swagger
+5. Access API documentation with Swagger
 ```bash
 http://127.0.0.1:8000/docs
 ```
